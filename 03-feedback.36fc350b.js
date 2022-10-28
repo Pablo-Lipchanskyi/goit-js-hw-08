@@ -1,2 +1,0 @@
-!function(){var e,t="feedback-form",a={form:document.querySelector(".feedback-form"),email:document.querySelector("[name=email]"),textarea:document.querySelector("[name=message]")};a.form.addEventListener("submit",(function(e){e.preventDefault(),e.target.reset(),localStorage.removeItem(t),console.log("Jnghfdrf")})),a.textarea.addEventListener("input",(function(e){var a=e.target.value;localStorage.setItem(t,a)})),(e=localStorage.getItem(t))&&(console.log(e),a.textarea.value=e)}();
-//# sourceMappingURL=03-feedback.36fc350b.js.map
