@@ -25,7 +25,7 @@ lightbox.open
 
 
 function galleryItemsCreate(galleryItems) {
-    return [...galleryItems].map(
+    return galleryItems.map(
         ({ description, preview, original }) =>
             `<a class="gallery__item" href="${original}">
             <img class="gallery__image"
