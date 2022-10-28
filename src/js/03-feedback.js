@@ -1,3 +1,4 @@
+const STORAGE = 'feedback-form';
 const refs = {
     form: document.querySelector('.feedback-form'),
     email: document.querySelector('[name=email]'),
@@ -9,18 +10,19 @@ savedLocal()
 
 function onTextInput(event) {
     const message = event.target.value;
-    localStorage.setItem('feedback-form', message)
+    localStorage.setItem(STORAGE, message);
 }
 function onFormSubmit(event) {
     event.preventDefault();
     event.target.reset();
-    localStorage.removeItem(message)
-    console.log("Jnghfdrf")
+    localStorage.removeItem(STORAGE);
+    console.log("Jnghfdrf");
 }
 function savedLocal() {
-    const savedMessage = localStorage.getItem('feedback-form');
+    const savedMessage = localStorage.getItem(STORAGE);
     if (savedMessage) {
         console.log(savedMessage);
+        refs.textarea.value = savedMessage;
     }
     
 }
