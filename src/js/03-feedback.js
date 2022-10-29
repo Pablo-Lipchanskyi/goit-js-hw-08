@@ -22,7 +22,7 @@ function onFormSubmit(event) {
     event.preventDefault();
     event.target.reset();
     localStorage.removeItem(STORAGE);
-    console.log(JSON.parse(formData))
+    console.log(formData)
 }
 function savedLocal() {
     const savedMessage = localStorage.getItem(STORAGE);
